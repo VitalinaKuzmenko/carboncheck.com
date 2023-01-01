@@ -1,0 +1,15 @@
+:root{
+--yellow: #ffdd32
+--yellow-one: #ffd53e
+--yellow-two:#fdc43f
+--dark-brown:#2d2a32
+--brackish:#000814
+--black:#03071e
+}
+body{
+   background-image: url(../media/background-foot.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
