@@ -13,3 +13,37 @@ body{
     background-size: cover;
     height: 100vh;
 }
+.image{
+    transform: rotate(45deg);
+}
+.main-text{
+    display:flex;
+    height: 70vh;
+   
+}
+.left-side{
+    font-size: 2rem;
+    width: 50%;
+    text-align: end;
+    margin-top: 10%;
+    padding-right: 1.5rem;
+}
+.right-side{
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-top: 15%;
+    padding-left: 1.5rem;
+}
+.footer{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.footer>li{
+    text-decoration: none;
+}
+.socials{
+    display: flex;
+    justify-content: center;
+}
