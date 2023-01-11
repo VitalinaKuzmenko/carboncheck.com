@@ -5,6 +5,8 @@
   --dark-brown: #2d2a32;
   --brackish: #000814;
   --black: #03071e;
+  --text-font: "Manrope", sans-serif;
+  --main-font: "Rubik One";
 }
 body {
   background-image: url(../media/background-foot.png);
@@ -12,9 +14,43 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  font-family: var(--text-font);
 }
-.logo-image {
-  transform: rotate(45deg);
+
+/* menu */
+.navbar .logo-group {
+  display: flex;
+  align-items: center;
+  margin-left: 2.5em !important;
+}
+.navbar .logo-text {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  padding-top: 30px;
+}
+.navbar .changed-toggler {
+  padding-top: 20px;
+  border: none;
+}
+.navbar .navbar-toggler-icon {
+  background-image: url("/media/menu-hamburger.svg");
+}
+.menu {
+  margin-right: 2.5em !important;
+  padding-top: 20px;
+}
+.menu .nav-link {
+  font-family: var(--text-font) !important;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 40px;
+  color: black;
+  padding: 0 40px 0 40px !important;
+}
+.menu .active {
+  font-weight: 800;
 }
 .main-text {
   display: flex;
