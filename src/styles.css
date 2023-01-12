@@ -22,12 +22,12 @@ body {
 .navbar .logo-group {
   display: flex;
   align-items: center;
-  margin-left: 2.5em !important;
+  margin-left: 0.8em !important;
 }
 .navbar .logo-text {
   font-family: var(--main-font);
   font-weight: 400;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 40px;
   padding-top: 30px;
 }
@@ -103,8 +103,11 @@ main .row {
 
 /* footer */
 footer .container {
+  display: block;
+  margin: 0 auto !important;
   text-align: center;
-  margin: 25px 0 !important;
+  margin-top: 25px !important;
+  margin-bottom: 25px !important;
 }
 footer .container .col-lg {
   padding: 0 !important;
@@ -136,20 +139,25 @@ footer hr {
   display: block;
   margin: 0 auto;
 }
-.footer {
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-}
-.footer > li {
-  text-decoration: none;
-}
-.socials {
+footer .socials {
+  margin: 30px 0 !important;
   display: flex;
   justify-content: center;
 }
+footer .socials i {
+  font-size: 30px;
+  padding: 0 10px;
+}
 
 @media (min-width: 991px) {
+  /*menu */
+  .navbar .logo-group {
+    margin-left: 2.5em !important;
+  }
+  .navbar .logo-text {
+    font-size: 32px;
+  }
+
   /* main window */
   main .container {
     margin-top: 10%;
