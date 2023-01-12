@@ -118,6 +118,10 @@ footer .container a {
   text-decoration: none;
   color: black;
 }
+footer .container .footer-link:hover {
+  color: #000000b0;
+  cursor: pointer;
+}
 footer .logo-group {
   display: flex;
   align-items: center;
@@ -146,6 +150,10 @@ footer .socials {
 footer .socials i {
   font-size: 30px;
   padding: 0 10px;
+}
+footer .socials i:hover {
+  color: #000000b0;
+  cursor: pointer;
 }
 
 @media (max-width: 390px) {
