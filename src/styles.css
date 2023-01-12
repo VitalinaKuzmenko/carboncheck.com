@@ -149,12 +149,27 @@ footer .socials i {
 }
 
 @media (max-width: 390px) {
-}
-
-@media (min-width: 576px) {
-}
-
-@media (min-width: 768px) {
+  .navbar .logo-text {
+    font-size: 16px;
+  }
+  .left-side h1 {
+    font-size: 26px;
+    line-height: 31px;
+    width: 90%;
+  }
+  .right-side p {
+    font-size: 16px;
+    line-height: 23px;
+    width: 100%;
+  }
+  .right-side h3 {
+    font-size: 16px;
+    line-height: 31px;
+  }
+  .right-side .arrow {
+    font-size: 16px;
+    border: 2px solid #000000;
+  }
 }
 
 @media (min-width: 991px) {
