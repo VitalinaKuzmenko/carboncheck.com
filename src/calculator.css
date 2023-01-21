@@ -1,0 +1,43 @@
+:root {
+  --yellow: #ffdd32;
+  --yellow-one: #ffd53e;
+  --yellow-two: #fdc43f;
+  --dark-brown: #2d2a32;
+  --brackish: #000814;
+  --black: #03071e;
+  --text-font: "Manrope", sans-serif;
+  --main-font: "Rubik One";
+}
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "bar"
+    "image"
+    "question";
+}
+.progress-bar {
+  grid-area: bar;
+}
+.right-side-calculator {
+  grid-area: image;
+}
+.left-side-calculator {
+  grid-area: question;
+}
+
+@media (min-width: 991px) {
+  .calculator {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "bar ."
+      "question image"
+      "question image"
+      "question image"
+      "question image"
+      "question image";
+  }
+}
