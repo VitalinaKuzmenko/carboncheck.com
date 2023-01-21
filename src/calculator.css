@@ -69,7 +69,6 @@ body {
   justify-content: space-between;
   font-weight: 400;
   font-size: 16px;
-  /* line-height: 19px; */
   border-bottom: 1px solid black;
   padding-bottom: 0.3rem;
 }
@@ -114,7 +113,7 @@ body {
 @media (min-width: 991px) {
   .calculator {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(6, auto);
     grid-template-areas:
       "bar ."
@@ -123,5 +122,35 @@ body {
       "question image"
       "question image"
       "question image";
+    min-height: calc(100vh - 30%);
+    margin: 0;
+  }
+  .right-side-calculator {
+    padding: 10% 10%;
+    border-left: 4px solid black;
+  }
+  .left-side-calculator {
+    padding: 10% 10% 0 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  .left-side-calculator .question {
+    font-size: 34px !important;
+    line-height: 40px !important;
+  }
+  .left-side-calculator .question-answer .answer_1 {
+    margin: 100px 0;
+    font-size: 20px;
+  }
+  .left-side-calculator .navigation-bottom-bar {
+    font-size: 22px;
+  }
+  .right-side-calculator .text-know .title {
+    font-size: 26px;
+    line-height: 26px;
+  }
+  .right-side-calculator .text-know .text {
+    font-size: 22px;
+    line-height: 24px;
   }
 }
