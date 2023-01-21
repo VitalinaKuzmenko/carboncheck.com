@@ -56,27 +56,32 @@
 
     <div class="progress-bar">Here will be progress bar</div>
     <div class="right-side-calculator">
-      <img src="" alt="image">
+      <img class="calc-image" src="media/House.png" alt="image of a house">
       <div class="text-know">
         <h1 class="title">DID YOU KNOW?</h1>
-        <p>If we switched every light in the UK....</p>
+        <p class="text">If we switched every light in the UK to low-energy LED lights, we could cut our power needs by
+          the equivalent to more than two new nuclear power stations!</p>
       </div>
     </div>
     <div class="left-side-calculator">
       <div class="question-answer">
         <h1 class="question">How many people are there in your household?</h1>
-        <label class="answer" for="number_of_persons">Number of persons</label>
-        <input class="answer" id="number_of_persons" type="text" name="number_of_persons" />
-        <p class="answer">person(-s)</p>
+        <div class="answer_1">
+          <label class="answer" for="number_of_persons">Number of persons</label>
+          <input class="answer" id="number_of_persons" type="number" name="number_of_persons" placeholder="1" />
+          <p class="answer">person(-s)</p>
+        </div>
       </div>
 
       <div class="navigation-bottom-bar">
-        <div class="arrow-btn-backward">
-          <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+        <div class="arrow-btn arrow-btn-backward">
+          <i class="fa-solid fa-arrow-left arrow"></i>
+          <p>back</p>
         </div>
-        <p><span id="changed-number">1</span>\9</p>
-        <div class="arrow-btn-forward">
-          <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+        <p class="number_page"><span id="changed-number">1</span>\9</p>
+        <div class="arrow-btn arrow-btn-forward">
+          <p>forward</p>
+          <i class="fa-solid fa-arrow-right arrow"></i>
         </div>
       </div>
 

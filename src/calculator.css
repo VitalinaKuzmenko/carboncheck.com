@@ -8,6 +8,9 @@
   --text-font: "Manrope", sans-serif;
   --main-font: "Rubik One";
 }
+body {
+  background-image: url(../media/yellow-background.png);
+}
 .calculator {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -16,15 +19,96 @@
     "bar"
     "image"
     "question";
+  margin: 20px 50px;
 }
 .progress-bar {
   grid-area: bar;
 }
+
+/* right side of page */
 .right-side-calculator {
   grid-area: image;
 }
+.right-side-calculator .calc-image {
+  width: 100%;
+  height: auto;
+}
+.right-side-calculator .text-know {
+  background-color: #afafc3;
+  border: 3px solid black;
+  padding: 10px 10px;
+  margin: 20px 0;
+}
+.right-side-calculator .text-know .title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 20px;
+}
+.right-side-calculator .text-know .text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0;
+}
+
+/* left side of page */
 .left-side-calculator {
   grid-area: question;
+}
+.left-side-calculator .question-answer {
+  margin: 20% 0 40% 0;
+}
+.left-side-calculator .question-answer .question {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 25px;
+}
+.left-side-calculator .question-answer .answer_1 {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 16px;
+  /* line-height: 19px; */
+  border-bottom: 1px solid black;
+  padding-bottom: 0.3rem;
+}
+.left-side-calculator .question-answer .answer_1 input {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  width: 20%;
+}
+.left-side-calculator .question-answer .answer_1 .answer {
+  margin: 0;
+}
+
+/* bottom nav-bar */
+.left-side-calculator .navigation-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-side-calculator .navigation-bottom-bar .arrow-btn {
+  display: flex;
+  align-items: center;
+}
+.arrow {
+  font-size: 22px;
+  border: 3px solid #000000;
+  border-radius: 50%;
+  padding: 5px 8px 5px 8px;
+}
+.left-side-calculator .navigation-bottom-bar .arrow-btn p {
+  padding: 0 5px;
+  font-weight: 600;
+  margin: 0;
+}
+.left-side-calculator .navigation-bottom-bar .number_page {
+  margin: 0;
+}
+.left-side-calculator .navigation-bottom-bar #changed-number {
+  font-weight: 600;
 }
 
 @media (min-width: 991px) {
