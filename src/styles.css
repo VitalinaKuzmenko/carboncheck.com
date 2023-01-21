@@ -157,6 +157,9 @@ footer .socials i:hover {
   color: #000000b0;
   cursor: pointer;
 }
+footer .c-text {
+  text-align: center;
+}
 
 @media (max-width: 390px) {
   .navbar .logo-text {
