@@ -183,6 +183,9 @@ footer .socials i:hover {
 }
 
 @media (min-width: 991px) {
+  .main-page {
+    min-height: calc(100vh - 35%) !important;
+  }
   /*menu */
   .navbar .logo-group {
     margin-left: 2.5em !important;
