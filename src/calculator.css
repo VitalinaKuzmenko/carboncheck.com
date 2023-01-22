@@ -120,7 +120,18 @@ body {
   border-bottom: 1px solid black;
   padding-bottom: 0.3rem;
 }
+.left-side-calculator .question-answer .journeys_answers div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 .left-side-calculator .question-answer .answer_1 input {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  width: 10%;
+}
+.left-side-calculator .question-answer .answer_5 input {
   background-color: transparent;
   border: none;
   text-align: center;
