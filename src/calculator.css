@@ -100,8 +100,10 @@ body {
   font-size: 28px;
   line-height: 25px;
 }
-.left-side-calculator .question-answer .answer_1 {
+.left-side-calculator .question-answer .answer-group {
   margin: 40px 0;
+}
+.left-side-calculator .question-answer .answer_1 {
   display: flex;
   justify-content: space-between;
   font-weight: 400;
@@ -118,8 +120,21 @@ body {
 .left-side-calculator .question-answer .answer_1 .answer {
   margin: 0;
 }
+.left-side-calculator .question-answer .radio {
+  display: flex;
+  flex-direction: column;
+}
+.left-side-calculator .question-answer .radio div {
+  padding: 1% 0;
+}
+.left-side-calculator .question-answer .answer-group input {
+  /* accent-color: black; */
+}
 
 /* bottom nav-bar */
+.step-one .left-side-calculator .navigation-bottom-bar .btn-backward {
+  visibility: hidden;
+}
 .left-side-calculator .navigation-bottom-bar {
   display: flex;
   justify-content: space-between;
@@ -163,7 +178,7 @@ body {
       "question image"
       "question image";
     min-height: calc(100vh - 30%);
-    margin: 0;
+    margin: 2% 0;
   }
   .progress-text {
     font-size: 20px;
@@ -185,7 +200,7 @@ body {
     font-size: 34px !important;
     line-height: 40px !important;
   }
-  .left-side-calculator .question-answer .answer_1 {
+  .left-side-calculator .question-answer .answer-group {
     margin: 100px 0;
     font-size: 20px;
   }
