@@ -71,10 +71,19 @@ body {
   height: auto;
 }
 .right-side-calculator .text-know {
-  background-color: #afafc3;
   border: 3px solid black;
   padding: 10px 10px;
   margin: 20px 0;
+}
+.right-side-calculator .text-home {
+  background-color: #afafc3;
+}
+.right-side-calculator .text-transport {
+  background-color: #f1e9c2;
+}
+.right-side-calculator .text-food {
+}
+.right-side-calculator .text-recycling {
 }
 .right-side-calculator .text-know .title {
   font-weight: 600;
