@@ -62,6 +62,15 @@ body {
   background-color: transparent !important;
 }
 
+/* answer-questions */
+.form-step {
+  display: none !important;
+}
+
+.active-section {
+  display: grid !important;
+}
+
 /* right side of page */
 .right-side-calculator {
   grid-area: image;
