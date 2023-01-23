@@ -111,9 +111,10 @@ body {
 /* left side of page */
 .left-side-calculator {
   grid-area: question;
+  position: relative;
 }
 .left-side-calculator .question-answer {
-  margin: 20% 0 40% 0;
+  margin: 20% 0 10% 0;
 }
 .left-side-calculator .question-answer .question {
   font-weight: 600;
@@ -159,7 +160,7 @@ body {
   padding: 1% 0;
 }
 .left-side-calculator .question-answer .answer-group input {
-  /* accent-color: black; */
+  accent-color: black;
 }
 
 /* bottom nav-bar */
@@ -219,8 +220,9 @@ body {
     padding: 0 7.3%;
   }
   .right-side-calculator {
-    padding: 10% 10%;
+    padding: 20% 10%;
     border-left: 4px solid black;
+    min-height: 60vh;
   }
   .left-side-calculator {
     padding: 10% 10% 0 10%;
@@ -240,6 +242,11 @@ body {
   }
   .left-side-calculator .navigation-bottom-bar {
     font-size: 22px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 5%;
   }
   .right-side-calculator .text-know .title {
     font-size: 26px;
