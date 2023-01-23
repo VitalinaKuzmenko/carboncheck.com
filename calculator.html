@@ -196,12 +196,12 @@
           <h1 class="question">Is heating oil, coal, wood or bottled gas used in your household?</h1>
           <fieldset class="answer-group radio answer_3">
             <div>
-              <input id="yes-answer" type="radio" name="yes-answer" value="yes-answer" checked />
-              <label for="yes-answer">Yes</label>
+              <input id="yes_answer" type="radio" name="answer1" value="yes_answer" checked />
+              <label for="yes_answer">Yes</label>
             </div>
 
-            <div> <input id="no-answer" type="radio" name="no-answer" value="no-answer" />
-              <label for="no-answer">No</label>
+            <div> <input id="no_answer" type="radio" name="answer1" value="no_answer" />
+              <label for="no_answer">No</label>
             </div>
         </div>
         </fieldset>
@@ -397,19 +397,19 @@
           <h1 class="question">How much of the food that you eat is organic?</h1>
           <fieldset class="answer-group radio answer_6">
             <div>
-              <input id="none" type="radio" name="none" value="none" checked />
+              <input id="none" type="radio" name="answer" value="none" checked />
               <label for="none">None</label>
             </div>
 
-            <div> <input id="some" type="radio" name="some" value="some" />
+            <div> <input id="some" type="radio" name="answer" value="some" />
               <label for="some">Some</label>
             </div>
 
-            <div> <input id="most" type="radio" name="most" value="most" />
+            <div> <input id="most" type="radio" name="answer" value="most" />
               <label for="most">Most</label>
             </div>
 
-            <div><input id="all" type="radio" name="all" value="all" />
+            <div><input id="all" type="radio" name="answer" value="all" />
               <label for="all">All</label>
             </div>
           </fieldset>
@@ -421,6 +421,72 @@
             <p>back</p>
           </div>
           <p class="number_page"><span id="changed-number">6</span>\9</p>
+          <div class="arrow-btn btn-forward">
+            <p>forward</p>
+            <i class="fa-solid fa-arrow-right arrow"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="calculator form-step step-seven active">
+      <section class="progress-bar">
+        <div class="progress-wrapper-text">
+          <ul class="progress-text">
+            <li class="after-line">Home</li>
+            <li class="after-line">Transport</li>
+            <li class="after-line">Food</li>
+            <li>Recycling</li>
+          </ul>
+        </div>
+        <div class="progress" role="progressbar" aria-label="progress bar" aria-valuenow="66" aria-valuemin="0"
+          aria-valuemax="100">
+          <div class="progress-bar bg-dark" style="width:66%"></div>
+        </div>
+      </section>
+
+      <div class=" right-side-calculator">
+        <img class="calc-image" src="media/food.png" alt="the desk with food">
+        <div class="text-know text-food">
+          <h1 class="title">DID YOU KNOW?</h1>
+          <p class="text">A large proportion of greenhouse gas emissions comes from food production, and meat and dairy
+            are associated with much higher carbon emissions than plant-based food.</p>
+        </div>
+      </div>
+
+      <div class="left-side-calculator">
+        <div class="question-answer">
+          <h1 class="question">How much meat/dairy do you eat personally?</h1>
+          <fieldset class="answer-group radio answer_6">
+            <div>
+              <input id="none" type="radio" name="meat_dairy" value="none" checked />
+              <label for="none">Above-average meat/dairy</label>
+            </div>
+
+            <div> <input id="some" type="radio" name="meat_dairy" value="some" />
+              <label for="some">Average meat/dairy</label>
+            </div>
+
+            <div> <input id="most" type="radio" name="meat_dairy" value="most" />
+              <label for="most">Below-average meat/dairy</label>
+            </div>
+
+            <div><input id="all" type="radio" name="meat_dairy" value="all" />
+              <label for="all">Lacto-vegetarian</label>
+            </div>
+
+            <div><input id="all" type="radio" name="meat_dairy" value="all" />
+              <label for="all">Vegan</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="navigation-bottom-bar">
+          <div class="arrow-btn btn-backward">
+            <i class="fa-solid fa-arrow-left arrow"></i>
+            <p>back</p>
+          </div>
+          <p class="number_page"><span id="changed-number">7</span>\9</p>
           <div class="arrow-btn btn-forward">
             <p>forward</p>
             <i class="fa-solid fa-arrow-right arrow"></i>
