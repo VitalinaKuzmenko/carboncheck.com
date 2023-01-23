@@ -85,6 +85,7 @@ body {
   background-color: #ced1cd;
 }
 .right-side-calculator .text-recycling {
+  background-color: white;
 }
 .right-side-calculator .text-know .title {
   font-weight: 600;
@@ -224,6 +225,9 @@ body {
   .left-side-calculator .question-answer .answer-group {
     margin: 100px 0;
     font-size: 20px;
+  }
+  .step-nine .left-side-calculator .question-answer .answer-group fieldset {
+    margin-bottom: 3%;
   }
   .left-side-calculator .navigation-bottom-bar {
     font-size: 22px;
