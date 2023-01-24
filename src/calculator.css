@@ -163,6 +163,20 @@ body {
   accent-color: black;
 }
 
+.step-three .if_yes {
+  margin-top: 5%;
+  display: none;
+}
+.step-three .if_yes input {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  width: 20%;
+}
+.step-three .show_yes {
+  display: block;
+}
+
 /* bottom nav-bar */
 .step-one .left-side-calculator .navigation-bottom-bar .btn-backward {
   visibility: hidden;
@@ -220,7 +234,7 @@ body {
     padding: 0 7.3%;
   }
   .right-side-calculator {
-    padding: 20% 10%;
+    padding: 10% 10%;
     border-left: 4px solid black;
     min-height: 60vh;
   }

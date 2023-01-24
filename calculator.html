@@ -119,7 +119,7 @@
         </div>
       </section>
 
-      <div class=" right-side-calculator">
+      <div class="right-side-calculator">
         <img class="calc-image" src="media/House.png" alt="image of a house">
         <div class="text-know text-home">
           <h1 class="title">DID YOU KNOW?</h1>
@@ -195,29 +195,51 @@
         <div class="question-answer">
           <h1 class="question">Is heating oil, coal, wood or bottled gas used in your household?</h1>
           <fieldset class="answer-group radio answer_3">
+            <div> <input id="no_answer" type="radio" name="answer1" value="no_answer" checked />
+              <label for="no_answer">No</label>
+            </div>
             <div>
-              <input id="yes_answer" type="radio" name="answer1" value="yes_answer" checked />
+              <input id="yes_answer" type="radio" name="answer1" value="yes_answer" />
               <label for="yes_answer">Yes</label>
             </div>
 
-            <div> <input id="no_answer" type="radio" name="answer1" value="no_answer" />
-              <label for="no_answer">No</label>
-            </div>
-        </div>
-        </fieldset>
+            <div class="if_yes">
+              <h3>Enter your use over the last year:</h3>
+              <div>
+                <label class="answer" for="car_mileage">The number of litres of heating oil:</label>
+                <input class="answer" id="car_mileage" type="number" name="car_mileage" placeholder="0" required />
+              </div>
 
-        <div class="navigation-bottom-bar">
-          <div class="arrow-btn btn-backward">
-            <i class="fa-solid fa-arrow-left arrow"></i>
-            <p>back</p>
-          </div>
-          <p class="number_page"><span id="changed-number">3</span>\9</p>
-          <div class="arrow-btn btn-forward">
-            <p>forward</p>
-            <i class="fa-solid fa-arrow-right arrow"></i>
+
+              <div>
+                <label class="answer" for="bus_mileage">The number of kilograms of coal:</label>
+                <input class="answer" id="bus_mileage" type="number" name="bus_mileage" placeholder="0" required />
+              </div>
+
+              <div>
+                <label class="answer" for="train_mileage">The number of kilograms of wood:</label>
+                <input class="answer" id="train_mileage" type="number" name="train_mileage" placeholder="0" required />
+              </div>
+
+              <div>
+                <label class="answer" for="car_mileage">The number of kilograms of bottled gas:</label>
+                <input class="answer" id="car_mileage" type="number" name="car_mileage" placeholder="0" required />
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="navigation-bottom-bar">
+            <div class="arrow-btn btn-backward">
+              <i class="fa-solid fa-arrow-left arrow"></i>
+              <p>back</p>
+            </div>
+            <p class="number_page"><span id="changed-number">3</span>\9</p>
+            <div class="arrow-btn btn-forward">
+              <p>forward</p>
+              <i class="fa-solid fa-arrow-right arrow"></i>
+            </div>
           </div>
         </div>
-      </div>
     </section>
 
     <section class="calculator form-step step-four">
