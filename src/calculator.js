@@ -46,6 +46,23 @@ let button3 = document
   .querySelector(".step-three")
   .querySelector(".btn-forward");
 button3.addEventListener("click", findAnswer3);
+
+//showing extra info on page 3. If user choose YES => then we will show information
+let radioButtonNo = document.getElementById("no_answer");
+radioButtonNo.addEventListener("change", hideExtraInfoQuestion3);
+let radioButtonYes = document.getElementById("yes_answer");
+radioButtonYes.addEventListener("change", showExtraInfoQuestion3);
+
+function hideExtraInfoQuestion3() {
+  let extraInfo = document.querySelector(".if_yes");
+  extraInfo.classList.remove("show_yes");
+}
+
+function showExtraInfoQuestion3() {
+  let extraInfo = document.querySelector(".if_yes");
+  extraInfo.classList.add("show_yes");
+}
+
 let button4 = document
   .querySelector(".step-four")
   .querySelector(".btn-forward");
@@ -69,7 +86,9 @@ button9.addEventListener("click", Calculate);
 
 // functions
 function findAnswer1() {
-  answer1 = document.querySelector(".step-one").querySelector("input").value;
+  answer1 = Number(
+    document.querySelector(".step-one").querySelector("input").value
+  );
   if (answer1.length === 0) {
     answer1 = 1;
   }
@@ -89,38 +108,22 @@ function findAnswer2() {
   console.log("the answer2 is " + answer2);
 }
 
-// let radioButtonNo = document.getElementById("no_answer");
-// radioButton.addEventListener("change", hideExtraInfoQuestion3);
-// let radioButtonYes = document.getElementById("yes_answer");
-// radioButton.addEventListener("change", showExtraInfoQuestion3);
-
-const radioButtonsYesNo = document.querySelectorAll('input[name="answer1"]');
-for (radioButton of radioButtonsYesNo) {
-  radioButton.addEventListener("change", showExtraInfo);
-}
-
-function showExtraInfo(e) {
-  console.log(e);
-  if (this.checked === "Yes") {
-    let extraInfo = document.querySelector(".if_yes");
-    extraInfo.classList.add("show_yes");
-    console.log(this);
-  }
-}
-
-// function hideExtraInfoQuestion3() {
-//   let extraInfo = document.querySelector(".if_yes");
-//   extraInfo.remove("show_yes");
-// }
-
-// function showExtraInfoQuestion3() {
-//   let extraInfo = document.querySelector(".if_yes");
-//   extraInfo.className(".show_yes");
-// }
-
 function findAnswer3() {
   if (document.getElementById("no_answer").checked) {
     answer3 = 0;
+    console.log("the answer3 is: " + answer3);
   } else {
+    let heatingOil = Number(document.getElementById("heating_oil").value);
+    let coal = Number(document.getElementById("coal").value);
+    let wood = Number(document.getElementById("wood").value);
+    let bottledGas = Number(document.getElementById("bottled-gas").value);
+
+    if (heatingOil.length === 0) heatingOil = 0;
+    if (coal.length === 0) coal = 0;
+    if (wood.length === 0) wood = 0;
+    if (bottledGas.length === 0) bottledGas = 0;
+
+    answer3 = (heatingOil + coal + wood + bottledGas).toFixed(2);
+    console.log("the answer3 is: " + answer3);
   }
 }
