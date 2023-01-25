@@ -71,6 +71,11 @@ let button5 = document
   .querySelector(".step-five")
   .querySelector(".btn-forward");
 button5.addEventListener("click", findAnswer5);
+let button5backward = document
+  .querySelector(".step-five")
+  .querySelector(".btn-backward");
+button5backward.addEventListener("click", removePage5);
+
 let button6 = document.querySelector(".step-six").querySelector(".btn-forward");
 button6.addEventListener("click", findAnswer6);
 let button7 = document
@@ -126,4 +131,105 @@ function findAnswer3() {
     answer3 = (heatingOil + coal + wood + bottledGas).toFixed(2);
     console.log("the answer3 is: " + answer3);
   }
+}
+
+function findAnswer4() {
+  answer4 = [];
+  let car = document.getElementById("car");
+  let bus = document.getElementById("bus");
+  let train = document.getElementById("train");
+  let plane = document.getElementById("plane");
+
+  if (car.checked) answer4.push("car");
+  if (bus.checked) answer4.push("bus");
+  if (train.checked) answer4.push("train");
+  if (plane.checked) answer4.push("plane");
+  console.log("answer4 is: " + answer4);
+
+  if (answer4.length === 0) {
+    document
+      .getElementById("journeys_by_car")
+      .classList.add("show_car_checkbox");
+    document.getElementById("journeys_by_bus").classList.remove("hidden_info");
+    document
+      .getElementById("journeys_by_train")
+      .classList.remove("hidden_info");
+    document
+      .getElementById("journeys_by_plane")
+      .classList.remove("hidden_info");
+  }
+  if (answer4.includes("car"))
+    document
+      .getElementById("journeys_by_car")
+      .classList.add("show_car_checkbox");
+  if (answer4.includes("bus"))
+    document.getElementById("journeys_by_bus").classList.remove("hidden_info");
+  if (answer4.includes("train"))
+    document
+      .getElementById("journeys_by_train")
+      .classList.remove("hidden_info");
+  if (answer4.includes("plane"))
+    document
+      .getElementById("journeys_by_plane")
+      .classList.remove("hidden_info");
+}
+
+function removePage5() {
+  document.getElementById("journeys_by_bus").classList.add("hidden_info");
+  document.getElementById("journeys_by_train").classList.add("hidden_info");
+  document.getElementById("journeys_by_plane").classList.add("hidden_info");
+}
+
+function findAnswer5() {
+  let car_mile = Number(document.getElementById("car_mileage").value);
+  let bus_mile = Number(document.getElementById("bus_mileage").value);
+  let train_mile = Number(document.getElementById("train_mileage").value);
+  let plane_mile = Number(document.getElementById("plane_mileage").value);
+
+  //   if (car_mile.length === 0) car_mile = 0;
+  //   if (bus_mile.length === 0) bus_mile = 0;
+  //   if (train_mile.length === 0) train_mile = 0;
+  //   if (plane_mile.length === 0) plaine_mile = 0;
+
+  //car footprint
+  if (car_mile < 100) {
+    car_mile *= 0.03;
+  } else if (car_mile < 1000) {
+    car_mile *= 0.13;
+  } else if (car_mile > 1000) {
+    car_mile *= 1.18;
+  } else {
+    car_mile = 0;
+  }
+
+  //bus footprint
+  if (bus_mile < 100) {
+    bus_mile *= 0.01;
+  } else if (bus_mile < 1000) {
+    bus_mile *= 0.12;
+  } else {
+    bus_mile = 0;
+  }
+
+  //train footprint
+  if (train_mile < 100) {
+    train_mile *= 0.01;
+  } else if (train_mile < 1000) {
+    train_mile *= 0.12;
+  } else if (train_mile > 1000) {
+    train_mile *= 0.2;
+  } else {
+    train_mile = 0;
+  }
+
+  //plane footprint
+  plane_mile *= 0.25;
+  console.log(car_mile);
+  console.log(bus_mile);
+  console.log(train_mile);
+  console.log(plane_mile);
+
+  answer5 = car_mile + bus_mile + train_mile + plane_mile;
+
+  console.log("answer5 is: " + answer5);
 }

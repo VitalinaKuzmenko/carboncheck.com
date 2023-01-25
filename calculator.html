@@ -271,22 +271,22 @@
           <h1 class="question">What are the modes of transport you used last year?</h1>
           <fieldset class="answer-group radio answer_4">
             <div>
-              <input id="car" type="checkbox" name="transport" value="car" checked />
+              <input id="car" type="checkbox" name="transport" value="car" checked required />
               <label for="car">Car</label>
             </div>
 
             <div>
-              <input id="bus" type="checkbox" name="transport" value="bus" />
+              <input id="bus" type="checkbox" name="transport" value="bus" required />
               <label for="bus">Bus</label>
             </div>
 
             <div>
-              <input id="train" type="checkbox" name="transport" value="train" />
+              <input id="train" type="checkbox" name="transport" value="train" required />
               <label for="train">Train</label>
             </div>
 
             <div>
-              <input id="plane" type="checkbox" name="transport" value="plane" />
+              <input id="plane" type="checkbox" name="transport" value="plane" required />
               <label for="plane">Plane</label>
             </div>
         </div>
@@ -335,7 +335,7 @@
         <div class="question-answer">
           <h1 class="question">Provide 12-month mileage:</h1>
           <div class="answer-group answer_5">
-            <div class="journeys_answers" id="journeys_by_car">
+            <div class="journeys_answers hide_info" id="journeys_by_car">
               <h3>Journeys by car:</h3>
               <div>
                 <label class="answer" for="car_mileage">Provide 12-month car mileage:</label>
@@ -344,7 +344,7 @@
               </div>
             </div>
 
-            <div class="journeys_answers" id="journeys_by_bus">
+            <div class="journeys_answers hidden_info" id="journeys_by_bus">
               <h3>Journeys by bus:</h3>
               <div>
                 <label class="answer" for="bus_mileage">Provide your regular mileage each month:</label>
@@ -353,7 +353,7 @@
               </div>
             </div>
 
-            <div class="journeys_answers" id="journeys_by_train">
+            <div class="journeys_answers hidden_info" id="journeys_by_train">
               <h3>Journeys by train:</h3>
               <div>
                 <label class="answer" for="train_mileage">Provide your regular mileage in the year:</label>
@@ -362,11 +362,11 @@
               </div>
             </div>
 
-            <div class="journeys_answers" id="journeys_by_plane">
+            <div class="journeys_answers hidden_info" id="journeys_by_plane">
               <h3>Journeys by plane:</h3>
               <div>
-                <label class="answer" for="car_mileage">Provide hours spent on flights:</label>
-                <input class="answer" id="car_mileage" type="number" name="car_mileage" placeholder="0" required />
+                <label class="answer" for="plane_mileage">Provide hours spent on flights:</label>
+                <input class="answer" id="plane_mileage" type="number" name="plane_mileage" placeholder="0" required />
                 <p class="answer">h</p>
               </div>
             </div>

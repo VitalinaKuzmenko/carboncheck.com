@@ -176,6 +176,15 @@ body {
 .step-three .show_yes {
   display: block;
 }
+.hidden_info {
+  display: none !important;
+}
+.hide_info {
+  display: none;
+}
+.step-five .show_car_checkbox {
+  display: block !important;
+}
 
 /* bottom nav-bar */
 .step-one .left-side-calculator .navigation-bottom-bar .btn-backward {
