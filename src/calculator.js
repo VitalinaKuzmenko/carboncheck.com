@@ -86,8 +86,8 @@ let button8 = document
   .querySelector(".step-eight")
   .querySelector(".btn-forward");
 button8.addEventListener("click", findAnswer8);
-let button9 = document.querySelector(".step-none").querySelector(".btn-submit");
-button9.addEventListener("click", Calculate);
+let button9 = document.querySelector(".step-nine").querySelector(".btn-submit");
+button9.addEventListener("click", calculate);
 
 // functions
 function findAnswer1() {
@@ -232,4 +232,53 @@ function findAnswer5() {
   answer5 = car_mile + bus_mile + train_mile + plane_mile;
 
   console.log("answer5 is: " + answer5);
+}
+
+function findAnswer6() {
+  if (document.getElementById("none").checked) answer6 = 0.7;
+  if (document.getElementById("some").checked) answer6 = 0.5;
+  if (document.getElementById("most").checked) answer6 = 0.2;
+  if (document.getElementById("all").checked) answer6 = 0;
+
+  console.log("answer6 is: " + answer6);
+}
+
+function findAnswer7() {
+  if (document.getElementById("above-dairy").checked) answer7 = 0.6;
+  if (document.getElementById("average-dairy").checked) answer7 = 0.4;
+  if (document.getElementById("below-dairy").checked) answer7 = 0.25;
+  if (document.getElementById("lacto-vege").checked) answer7 = 0.1;
+  if (document.getElementById("vegan").checked) answer7 = 0;
+
+  console.log("answer7 is: " + answer7);
+}
+
+function findAnswer8() {
+  if (document.getElementById("above").checked) answer8 = 0.6;
+  if (document.getElementById("average").checked) answer8 = 0.4;
+  if (document.getElementById("below").checked) answer8 = 0.2;
+  if (document.getElementById("little").checked) answer8 = 0.05;
+
+  console.log("answer8 is: " + answer8);
+}
+
+function calculate() {
+  if (document.getElementById("above-average").checked) answer9 = 5;
+  if (document.getElementById("average-average").checked) answer9 = 3.4;
+  if (document.getElementById("below-average").checked) answer9 = 2.4;
+  if (document.getElementById("much-below-average").checked) answer9 = 1.4;
+
+  if (document.getElementById("yes").checked) answer9 -= 0.7;
+  if (document.getElementById("yes-answering").checked) answer9 -= 0.14;
+
+  console.log("answer9 is: " + answer9);
+
+  let totalResult =
+    answer2 / answer1 +
+    answer3 / answer1 +
+    answer5 +
+    answer6 +
+    answer7 +
+    answer8 +
+    answer9;
 }
