@@ -220,6 +220,44 @@ body {
   font-weight: 600;
 }
 
+/* final-result page */
+.final-result {
+  margin: 10% 10%;
+}
+.final-result h1 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+}
+.final-result h4 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 30px;
+}
+.final-result h1,
+h4 {
+  text-align: center;
+}
+.final-result .all_results {
+  margin: 5% 0;
+}
+.final-result .result_line {
+  display: grid;
+  grid-template-columns: 150px 80px 1fr;
+  grid-template-rows: repeat(1, auto);
+  grid-template-areas: "country  number progress";
+  font-size: 18px;
+}
+.final-result .result_line .country {
+  grid-area: country;
+}
+.final-result .result_line .total_result {
+  grid-area: number;
+}
+.final-result .progress {
+  grid-area: progress;
+}
+
 @media (min-width: 991px) {
   .calculator {
     display: grid;
@@ -278,5 +316,23 @@ body {
   .right-side-calculator .text-know .text {
     font-size: 22px;
     line-height: 24px;
+  }
+  .final-result .all_results {
+    margin: 5% 15%;
+  }
+  .final-result h1 {
+    font-size: 60px;
+    line-height: 82px;
+  }
+  .final-result h4 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+  .final-result .result_line {
+    display: grid;
+    grid-template-columns: 200px 100px 1fr;
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: "country  number progress";
+    font-size: 22px;
   }
 }

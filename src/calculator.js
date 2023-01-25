@@ -86,7 +86,9 @@ let button8 = document
   .querySelector(".step-eight")
   .querySelector(".btn-forward");
 button8.addEventListener("click", findAnswer8);
-let button9 = document.querySelector(".step-nine").querySelector(".btn-submit");
+let button9 = document
+  .querySelector(".step-nine")
+  .querySelector(".btn-forward");
 button9.addEventListener("click", calculate);
 
 // functions
@@ -94,10 +96,13 @@ function findAnswer1() {
   answer1 = Number(
     document.querySelector(".step-one").querySelector("input").value
   );
-  if (answer1.length === 0) {
+  if (
+    document.querySelector(".step-one").querySelector("input").value.length ===
+    0
+  ) {
     answer1 = 1;
   }
-  console.log("the first asnwer is " + answer1);
+  console.log("the first answer is " + answer1);
 }
 
 function findAnswer2() {
@@ -273,12 +278,26 @@ function calculate() {
 
   console.log("answer9 is: " + answer9);
 
-  let totalResult =
+  let totalResult = (
     answer2 / answer1 +
     answer3 / answer1 +
     answer5 +
     answer6 +
     answer7 +
     answer8 +
-    answer9;
+    answer9
+  ).toFixed(1);
+
+  console.log(totalResult);
+
+  //changing text on page
+  let totalTitle = document.getElementById("total_title");
+  totalTitle.innerHTML = `Your total is ${totalResult} tonnes CO2`;
+  let result = document.getElementById("result_number");
+  result.innerHTML = totalResult;
+
+  //changing progress bar of user total
+  let progressPercent = (totalResult * 100) / 17.6;
+  let progressValue = document.getElementById("progress-bar-to-change");
+  progressValue.style.width = `${progressPercent}%`;
 }

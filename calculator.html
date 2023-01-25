@@ -53,7 +53,7 @@
   </header>
 
   <main>
-    <section class="calculator form-step step-one active-section">
+    <section class="calculator form-step step-one  active-section">
       <section class="progress-bar">
         <div class="progress-wrapper-text">
           <ul class="progress-text">
@@ -659,8 +659,6 @@
                 <label for="no-answering">No</label>
               </div>
             </fieldset>
-
-
           </div>
         </div>
 
@@ -670,9 +668,72 @@
             <p>back</p>
           </div>
           <p class="number_page"><span id="changed-number">9</span>\9</p>
-          <div class="arrow-btn btn-submit">
+          <div class="arrow-btn btn-forward">
             <p>submit</p>
             <i class="fa-solid fa-arrow-right arrow"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-step final-result">
+      <h1 id="total_title">Your total is</h1>
+      <h4>How your total compares to the rest of the world</h4>
+      <div class="all_results">
+        <div class="result_line">
+          <p class="country">Your total</p>
+          <p id="result_number" class="total_result">number</p>
+          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
+            aria-valuemax="100">
+            <div id="progress-bar-to-change" class="progress-bar bg-danger" style="width: 25%"></div>
+          </div>
+        </div>
+        <div class="result_line">
+          <p class="country">World average</p>
+          <p class="total_result">4.4</p>
+          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-success" style="width: 25%"></div>
+          </div>
+        </div>
+        <div class="result_line">
+          <p class="country">UK average</p>
+          <p class="total_result">14.1</p>
+          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-warning" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="result_line">
+          <p class="country">USA</p>
+          <p class="total_result">17.6</p>
+          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="100" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-info" style="width: 100%"></div>
+          </div>
+        </div>
+        <div class="result_line">
+          <p class="country">China</p>
+          <p class="total_result">6.2</p>
+          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="35" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-dark" style="width: 35%"></div>
+          </div>
+        </div>
+        <div class="result_line">
+          <p class="country">India</p>
+          <p class="total_result">1.8</p>
+          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="10" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-secondary" style="width: 10%"></div>
+          </div>
+        </div>
+        <div class="result_line">
+          <p class="country">Mozambique</p>
+          <p class="total_result">0.3</p>
+          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="2" aria-valuemin="0"
+            aria-valuemax="100">
+            <div class="progress-bar bg-white" style="width: 2%"></div>
           </div>
         </div>
       </div>
