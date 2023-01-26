@@ -166,10 +166,11 @@ footer .c-text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: calc(100vh - 35%) !important;
 }
 .contact-title {
   font-weight: 400;
-  font-size: 26px;
+  font-size: 30px;
   font-family: var(--main-font);
   margin: 5% 8%;
   text-align: center;
@@ -184,6 +185,7 @@ footer .c-text {
   transition: all ease-in 500ms;
   font-weight: 600;
   width: 150px;
+  text-align: center;
 }
 .contact_button:hover {
   background-color: transparent;
@@ -191,11 +193,14 @@ footer .c-text {
 }
 .contact-main .container {
   padding: 0 !important;
-  padding: 5% 8% 1% 8% !important;
+  margin: 5% 8% 1% 8% !important;
   text-align: center;
 }
+.contact-main .container .row {
+  margin: 0 !important;
+}
 .contact-main .info {
-  padding: 20px 0;
+  padding: 20px 10px;
 }
 .contact-main .info p {
   margin: 0 !important;
@@ -276,5 +281,22 @@ footer .c-text {
 
   footer .container a {
     font-size: 18px;
+  }
+
+  /* contact page */
+  .contact-title {
+    font-size: 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .contact-name {
+    font-size: 28px;
+  }
+  .contact-info {
+    font-size: 24px;
+  }
+  .contact_button {
+    font-size: 26px;
+    width: 300px;
   }
 }
