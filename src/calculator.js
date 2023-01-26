@@ -183,6 +183,9 @@ function removePage5() {
   document.getElementById("journeys_by_bus").classList.add("hidden_info");
   document.getElementById("journeys_by_train").classList.add("hidden_info");
   document.getElementById("journeys_by_plane").classList.add("hidden_info");
+  document
+    .getElementById("journeys_by_car")
+    .classList.remove("show_car_checkbox");
 }
 
 function findAnswer5() {
