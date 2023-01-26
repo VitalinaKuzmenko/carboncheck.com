@@ -191,18 +191,13 @@ function findAnswer5() {
   let train_mile = Number(document.getElementById("train_mileage").value);
   let plane_mile = Number(document.getElementById("plane_mileage").value);
 
-  //   if (car_mile.length === 0) car_mile = 0;
-  //   if (bus_mile.length === 0) bus_mile = 0;
-  //   if (train_mile.length === 0) train_mile = 0;
-  //   if (plane_mile.length === 0) plaine_mile = 0;
-
   //car footprint
   if (car_mile < 100) {
     car_mile *= 0.03;
   } else if (car_mile < 1000) {
     car_mile *= 0.13;
   } else if (car_mile > 1000) {
-    car_mile *= 1.18;
+    car_mile *= 0.18;
   } else {
     car_mile = 0;
   }
@@ -229,10 +224,6 @@ function findAnswer5() {
 
   //plane footprint
   plane_mile *= 0.25;
-  console.log(car_mile);
-  console.log(bus_mile);
-  console.log(train_mile);
-  console.log(plane_mile);
 
   answer5 = car_mile + bus_mile + train_mile + plane_mile;
 
