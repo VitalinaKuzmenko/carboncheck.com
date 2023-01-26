@@ -161,6 +161,54 @@ footer .c-text {
   text-align: center;
 }
 
+/* contact page */
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-title {
+  font-weight: 400;
+  font-size: 26px;
+  font-family: var(--main-font);
+  margin: 5% 8%;
+  text-align: center;
+}
+.contact_button {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 20px 20px;
+  border: 1px solid black;
+  border-radius: 40px;
+  transition: all ease-in 500ms;
+  font-weight: 600;
+  width: 150px;
+}
+.contact_button:hover {
+  background-color: transparent;
+  color: black;
+}
+.contact-main .container {
+  padding: 0 !important;
+  padding: 5% 8% 1% 8% !important;
+  text-align: center;
+}
+.contact-main .info {
+  padding: 20px 0;
+}
+.contact-main .info p {
+  margin: 0 !important;
+}
+.contact-name {
+  font-weight: 400;
+  font-size: 24px;
+}
+.contact-info {
+  font-weight: 400;
+  font-size: 22px;
+}
+
 @media (max-width: 390px) {
   .navbar .logo-text {
     font-size: 16px;
