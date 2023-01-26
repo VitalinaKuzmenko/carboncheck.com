@@ -55,7 +55,7 @@
     <h1 class="contact-title">We are open to improving the calculator - if you notice an error or have ideas, please
       fill the form.</h1>
 
-    <a href="#" class="contact_button">Send the form</a>
+    <a href="#popup1" class="contact_button">Send the form</a>
 
     <div class="container">
       <div class="row">
@@ -71,6 +71,41 @@
           <p class="contact-name">ADDRESS</p>
           <p class="contact-info">25 Green Street, C56 NQ1 London, UK</p>
         </div>
+      </div>
+    </div>
+
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>Your details</h2>
+        <a class="close" href="#">&times;</a>
+        <!-- form -->
+        <form class="order-form">
+          <div class="container-fluid content">
+            <div class="row">
+              <div class="col-md-6 form-group name">
+                <label for="first_name">First name *</label>
+                <input type="text" class="form-control input-text" id="first_name" name="first_name" minlength="3"
+                  required />
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="last_name">Last name *</label>
+                <input type="text" class="form-control input-text" id="last_name" name="last_name" minlength="3"
+                  required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md form-group message-form">
+                <label for="message">Message *</label>
+                <textarea id="message" class="form-control input-text" cols="50" rows="5"
+                  placeholder="Write your message..." required></textarea>
+
+              </div>
+            </div>
+
+            <button type="submit" class="send-message-button" id="order-button">Send message</button>
+          </div>
+        </form>
       </div>
     </div>
   </main>

@@ -214,6 +214,84 @@ footer .c-text {
   font-size: 22px;
 }
 
+/* popup form */
+form .row,
+form fieldset {
+  margin: 30px 0;
+}
+form label,
+form legend {
+  font-size: 18px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 40px;
+  background-image: url(/media/background-foot.png);
+  border-radius: 5px;
+  width: 40rem;
+  position: relative;
+  transition: all 2s ease-in-out;
+  width: 80%;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+.popup .close:hover {
+  color: rgba(32, 21, 21, 0.4);
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  padding: 0;
+}
+.message-form {
+  display: flex;
+  flex-direction: column;
+}
+.send-message-button {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 20px 20px;
+  border: 1px solid black;
+  border-radius: 40px;
+  transition: all ease-in 500ms;
+  font-weight: 600;
+  width: 200px;
+  text-align: center;
+}
+.send-message-button:hover {
+  background-color: transparent;
+  color: black;
+}
+
 @media (max-width: 390px) {
   .navbar .logo-text {
     font-size: 16px;
@@ -298,5 +376,9 @@ footer .c-text {
   .contact_button {
     font-size: 26px;
     width: 300px;
+  }
+
+  .popup {
+    width: 50%;
   }
 }
