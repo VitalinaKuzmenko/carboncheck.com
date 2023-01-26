@@ -53,7 +53,7 @@
   </header>
 
   <main>
-    <section class="calculator form-step step-one  active-section">
+    <section id="start-calculator" class="calculator form-step step-one active-section">
       <section class="progress-bar">
         <div class="progress-wrapper-text">
           <ul class="progress-text">
@@ -676,66 +676,95 @@
       </div>
     </section>
 
-    <section class="form-step final-result">
-      <h1 id="total_title">Your total is</h1>
-      <h4>How your total compares to the rest of the world</h4>
-      <div class="all_results">
-        <div class="result_line">
-          <p class="country">Your total</p>
-          <p id="result_number" class="total_result">number</p>
-          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
-            aria-valuemax="100">
-            <div id="progress-bar-to-change" class="progress-bar bg-danger" style="width: 25%"></div>
+    <section class="form-step final-result  active-section">
+      <div class="first-part">
+        <h1 id="total_title">Your total is</h1>
+        <h4>How your total compares to the rest of the world</h4>
+        <div class="all_results">
+          <div class="result_line">
+            <p class="country">Your total</p>
+            <p id="result_number" class="total_result">number</p>
+            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
+              aria-valuemax="100">
+              <div id="progress-bar-to-change" class="progress-bar bg-danger" style="width: 25%"></div>
+            </div>
+          </div>
+          <div class="result_line">
+            <p class="country">World average</p>
+            <p class="total_result">4.4</p>
+            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
+              aria-valuemax="100">
+              <div class="progress-bar bg-success" style="width: 25%"></div>
+            </div>
+          </div>
+          <div class="result_line">
+            <p class="country">UK average</p>
+            <p class="total_result">14.1</p>
+            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="80" aria-valuemin="0"
+              aria-valuemax="100">
+              <div class="progress-bar bg-warning" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="result_line">
+            <p class="country">USA</p>
+            <p class="total_result">17.6</p>
+            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="100" aria-valuemin="0"
+              aria-valuemax="100">
+              <div class="progress-bar bg-info" style="width: 100%"></div>
+            </div>
+          </div>
+          <div class="result_line">
+            <p class="country">China</p>
+            <p class="total_result">6.2</p>
+            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="35" aria-valuemin="0"
+              aria-valuemax="100">
+              <div class="progress-bar bg-dark" style="width: 35%"></div>
+            </div>
+          </div>
+          <div class="result_line">
+            <p class="country">India</p>
+            <p class="total_result">1.8</p>
+            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="10" aria-valuemin="0"
+              aria-valuemax="100">
+              <div class="progress-bar bg-secondary" style="width: 10%"></div>
+            </div>
+          </div>
+          <div class="result_line">
+            <p class="country">Mozambique</p>
+            <p class="total_result">0.3</p>
+            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="2" aria-valuemin="0"
+              aria-valuemax="100">
+              <div class="progress-bar bg-white" style="width: 2%"></div>
+            </div>
           </div>
         </div>
-        <div class="result_line">
-          <p class="country">World average</p>
-          <p class="total_result">4.4</p>
-          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
-            aria-valuemax="100">
-            <div class="progress-bar bg-success" style="width: 25%"></div>
-          </div>
+
+        <div class="buttons">
+          <a class="email_button" href="#email_form">Get personal advices</a>
+          <a class="again_button" href="#start-calculator">Start calculator one more time</a>
         </div>
-        <div class="result_line">
-          <p class="country">UK average</p>
-          <p class="total_result">14.1</p>
-          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100">
-            <div class="progress-bar bg-warning" style="width: 80%"></div>
+      </div>
+
+      <div id="email_form" class=" email_part second-part">
+        <p class="right-text">{I want to recieve personal advices}</p>
+        <h2>Leave your email address so we can send you more personalized advices to reduce your carbon footprint.</h2>
+        <form>
+          <div>
+            <input id="name" type="text" name="name" placeholder="Your name..." required />
           </div>
-        </div>
-        <div class="result_line">
-          <p class="country">USA</p>
-          <p class="total_result">17.6</p>
-          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="100" aria-valuemin="0"
-            aria-valuemax="100">
-            <div class="progress-bar bg-info" style="width: 100%"></div>
+          <div>
+            <input id="email" type="email" name="email" placeholder="Your email..." required />
           </div>
-        </div>
-        <div class="result_line">
-          <p class="country">China</p>
-          <p class="total_result">6.2</p>
-          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="35" aria-valuemin="0"
-            aria-valuemax="100">
-            <div class="progress-bar bg-dark" style="width: 35%"></div>
+          <div>
+            <input id="agreement" type="checkbox" name="agreement" required />
+            <label for="agreement" class="agreement-text">By filling out the form, I provide CarbonCheck.com with my
+              personal data and confirm
+              my consent to their processing.</label>
           </div>
-        </div>
-        <div class="result_line">
-          <p class="country">India</p>
-          <p class="total_result">1.8</p>
-          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="10" aria-valuemin="0"
-            aria-valuemax="100">
-            <div class="progress-bar bg-secondary" style="width: 10%"></div>
-          </div>
-        </div>
-        <div class="result_line">
-          <p class="country">Mozambique</p>
-          <p class="total_result">0.3</p>
-          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="2" aria-valuemin="0"
-            aria-valuemax="100">
-            <div class="progress-bar bg-white" style="width: 2%"></div>
-          </div>
-        </div>
+          <input type="submit" class="submit_button" id="submit_button">
+        </form>
+
+
       </div>
     </section>
   </main>

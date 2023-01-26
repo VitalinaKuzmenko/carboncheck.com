@@ -239,7 +239,7 @@ h4 {
   text-align: center;
 }
 .final-result .all_results {
-  margin: 5% 0;
+  margin: 5% 0 2% 0;
 }
 .final-result .result_line {
   display: grid;
@@ -256,6 +256,100 @@ h4 {
 }
 .final-result .progress {
   grid-area: progress;
+}
+.final-result .buttons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.final-result .buttons .email_button {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  margin: 10px 0;
+  padding: 20px 0;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 40px;
+  transition: all ease-in 500ms;
+  font-weight: 600;
+}
+.final-result .buttons .email_button:hover {
+  background-color: transparent;
+  color: black;
+}
+.final-result .buttons .again_button {
+  text-decoration: none;
+  background-color: transparent;
+  color: black;
+  margin: 10px 0;
+  padding: 20px 0;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 40px;
+  transition: all ease-in 500ms;
+  font-weight: 600;
+}
+.final-result .buttons .again_button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* email form of final page */
+.email_part {
+  padding: 10% 0;
+}
+.email_part .right-text {
+  text-align: end;
+  font-weight: 600;
+  font-size: 18px;
+}
+.email_part h2 {
+  font-weight: 600;
+  font-size: 30px;
+}
+.email_part #name,
+#email {
+  background-color: transparent;
+  border: 1px solid black;
+  margin: 5px 0;
+  padding: 10px 0;
+}
+::placeholder {
+  color: black;
+}
+.email_part #agreement {
+  accent-color: black;
+}
+.email_part .agreement-text {
+  font-size: 14px;
+  width: 50%;
+}
+.email_part .submit_button {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  margin: 10px 0;
+  padding: 20px 0;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 40px;
+  transition: all ease-in 500ms;
+  font-weight: 600;
+}
+.email_part .submit_button:hover {
+  background-color: transparent;
+  color: black;
+}
+
+@media (min-width: 540px) {
+  .email_part {
+    padding: 15% 0;
+    margin: 0 20%;
+  }
+  .email_part h2 {
+  }
 }
 
 @media (min-width: 991px) {
@@ -318,7 +412,7 @@ h4 {
     line-height: 24px;
   }
   .final-result .all_results {
-    margin: 5% 15%;
+    margin: 5% 15% 2% 15%;
   }
   .final-result h1 {
     font-size: 60px;
@@ -333,6 +427,33 @@ h4 {
     grid-template-columns: 200px 100px 1fr;
     grid-template-rows: repeat(1, auto);
     grid-template-areas: "country  number progress";
+    font-size: 22px;
+  }
+  .final-result .buttons .email_button {
+    font-size: 20px;
+    width: 350px;
+  }
+  .final-result .buttons .again_button {
+    font-size: 20px;
+    width: 350px;
+  }
+
+  .email_part .right-text {
+    font-size: 30px;
+  }
+  .email_part h2 {
+    font-size: 45px;
+    margin-top: 100px;
+  }
+  .email_part #name,
+  #email {
+    font-size: 20px;
+  }
+  .email_part .agreement-text {
+    font-size: 16px;
+    width: 30%;
+  }
+  .email_part .submit_button {
     font-size: 22px;
   }
 }

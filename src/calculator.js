@@ -300,4 +300,14 @@ function calculate() {
   let progressPercent = (totalResult * 100) / 17.6;
   let progressValue = document.getElementById("progress-bar-to-change");
   progressValue.style.width = `${progressPercent}%`;
+
+  //starting calculator one more time
+  let againCalculator = document.querySelector(".again_button");
+  againCalculator.addEventListener("click", () => {
+    formStepsNum = 0;
+    let finalForm = document.querySelector(".final-result");
+    let firstPage = document.querySelector(".step-one");
+    finalForm.classList.remove("active-section");
+    firstPage.classList.add("active-section");
+  });
 }
