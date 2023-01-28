@@ -275,7 +275,7 @@ function calculate() {
   let totalResult = (
     answer2 / answer1 +
     answer3 / answer1 +
-    answer5 +
+    answer5 / answer1 +
     answer6 +
     answer7 +
     answer8 +
