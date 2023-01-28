@@ -195,32 +195,22 @@ function findAnswer5() {
   let plane_mile = Number(document.getElementById("plane_mileage").value);
 
   //car footprint
-  if (car_mile < 100) {
-    car_mile *= 0.03;
-  } else if (car_mile < 1000) {
-    car_mile *= 0.13;
-  } else if (car_mile > 1000) {
-    car_mile *= 0.18;
+  if (car_mile > 0) {
+    car_mile *= 0.0003;
   } else {
     car_mile = 0;
   }
 
   //bus footprint
-  if (bus_mile < 100) {
-    bus_mile *= 0.01;
-  } else if (bus_mile < 1000) {
-    bus_mile *= 0.12;
+  if (bus_mile > 100) {
+    bus_mile = bus_mile * 12 * 0.0001;
   } else {
     bus_mile = 0;
   }
 
   //train footprint
-  if (train_mile < 100) {
-    train_mile *= 0.01;
-  } else if (train_mile < 1000) {
-    train_mile *= 0.12;
-  } else if (train_mile > 1000) {
-    train_mile *= 0.2;
+  if (train_mile > 100) {
+    train_mile *= 0.0001;
   } else {
     train_mile = 0;
   }
